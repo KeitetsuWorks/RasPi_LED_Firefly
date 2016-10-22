@@ -16,7 +16,7 @@ CFLAGS       = -Wall -Wextra -O3 -MMD -MP
 CXXFLAGS     = -Wall -Wextra -O3 -MMD -MP
 LDFLAGS      = -L/usr/local/lib -lwiringPi
 LIBS         =
-INCLUDE      = -I/usr/local/include
+INCLUDE      = -I./include -I/usr/local/include
 
 DOXYGENDIR   = ./html ./latex
 NOMAKEDIR    = $(DOXYGENDIR) .git%
