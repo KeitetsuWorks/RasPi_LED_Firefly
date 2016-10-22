@@ -9,11 +9,13 @@
 
 CROSS_PREFIX =
 
+GIT_VERSION  = $(shell git describe --tags --long)
+
 CC           = $(CROSS_PREFIX)gcc
 CXX          = $(CROSS_PREFIX)g++
 LD           = $(CROSS_PREFIX)gcc
-CFLAGS       = -Wall -Wextra -O3 -MMD -MP
-CXXFLAGS     = -Wall -Wextra -O3 -MMD -MP
+CFLAGS       = -Wall -Wextra -O3 -MMD -MP -DVERSION=\"$(GIT_VERSION)\"
+CXXFLAGS     = -Wall -Wextra -O3 -MMD -MP -DVERSION=\"$(GIT_VERSION)\"
 LDFLAGS      = -L/usr/local/lib -lwiringPi
 LIBS         =
 INCLUDE      = -I./include -I/usr/local/include
