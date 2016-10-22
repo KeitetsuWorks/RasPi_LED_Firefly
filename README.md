@@ -14,7 +14,7 @@ LED brightness control using PWM control on Raspberry Pi.
 
 ## Circuit
 * Connect the LED between GPIO 18 and GND via the 330 ohm resister.
-![BreadBoardView](https://4.bp.blogspot.com/-DqD35sTa8w0/WAsHtcEyOlI/AAAAAAAACuI/7Im-CcZxEqobJYAhFdADi0hy7rO_dccCACKgB/s0/RasPi_LED_Firefly_BB.png)
+![BreadBoardView](https://lh3.googleusercontent.com/-DqD35sTa8w0/WAsHtcEyOlI/AAAAAAAACuI/7Im-CcZxEqobJYAhFdADi0hy7rO_dccCACKgB/s0/RasPi_LED_Firefly_BB.png)
 
 ## Usage
 * Must be root to run `RasPi_LED_Firefly`.
