@@ -4,6 +4,9 @@ LED Firefly with Raspberry Pi
 ## Description
 LED brightness control using PWM control on Raspberry Pi.
 
+## Demo
+* [YouTube](https://www.youtube.com/watch?v=u058fWJ1VMg)
+
 ## Requirement
 ### Hardware
 * [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
