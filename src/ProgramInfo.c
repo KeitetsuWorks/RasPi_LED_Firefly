@@ -22,6 +22,8 @@ void printHelp(void)
     printf("  -i, --interval=INTERVAL   set the duty change interval time (usec)\n");
     printf("  -l, --loop=LOOP           set the loop count\n");
     printf("  -v, --version             print program version\n");
+
+    return;
 }
 
 
