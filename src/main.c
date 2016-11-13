@@ -19,7 +19,7 @@
 
 #define LED_PWM_DIV         3               /*!< LEDのPWMタイマ分周比（PWM周波数: 約24kHz） */
 #define LED_PWM_RANGE       256             /*!< LEDのPWM分解能 */
-#define LED_PWM_INTERVAL    4000            /*!< LEDの明暗変化間隔（デューティ比変更間隔）（マイクロ秒） */
+#define LED_PWM_INTERVAL    4000            /*!< LEDの明暗変化間隔（デューティ変更間隔）（マイクロ秒） */
 #define LED_PWM_LOOP        10              /*!< LEDの明暗繰返し回数 */
 
 
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
         switch(opt) {
             case 'd':
                 led_pwm_div = atoi(optarg);
-                if(led_pwm_div < 0) {
+                if(led_pwm_div < 1 || led_pwm_div > 4095) {
                     printf("Error: invalid divisor value: %d\n",
                             led_pwm_div);
                     
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
     for(led_pwm_count = 0; led_pwm_count < led_pwm_loop; led_pwm_count++) {
         // 暗 -> 明
         for(led_bright = 0; led_bright < LED_PWM_RANGE; led_bright++) {
-            pwmWrite(LED, led_bright);  // デューティ比の設定
+            pwmWrite(LED, led_bright);  // デューティの設定
             usleep(led_pwm_interval);
         }
         
