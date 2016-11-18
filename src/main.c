@@ -17,7 +17,7 @@
 
 #define LED                 18              /*!< LEDのGPIOポート番号 */
 
-#define LED_PWM_DIV         3               /*!< LEDのPWMタイマ分周比（PWM周波数: 約24kHz） */
+#define LED_PWM_DIV         3               /*!< LEDのPWMタイマ分周比（PWM周波数: 約25kHz） */
 #define LED_PWM_RANGE       256             /*!< LEDのPWM分解能 */
 #define LED_PWM_INTERVAL    4000            /*!< LEDの明暗変化間隔（デューティ変更間隔）（マイクロ秒） */
 #define LED_PWM_LOOP        10              /*!< LEDの明暗繰返し回数 */
@@ -107,9 +107,9 @@ int main(int argc, char *argv[])
     }
 
     pinMode(LED, PWM_OUTPUT);           // ポート設定
-    pwmSetMode(PWM_MODE_BAL);           // PWMモードの設定（バランスモード）
     pwmSetClock(led_pwm_div);           // PWMタイマ分周比の設定
     pwmSetRange(LED_PWM_RANGE);         // PWMタイマ分解能の設定
+    pwmSetMode(PWM_MODE_BAL);           // PWMモードの設定（バランスモード）
 
     // 設定の表示
     printf("divisor value: %d\n", led_pwm_div);
