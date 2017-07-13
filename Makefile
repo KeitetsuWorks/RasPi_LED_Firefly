@@ -22,10 +22,6 @@ INCLUDE      = -I./include -I/usr/local/include
 
 DOXYGENDIR   = ./html ./latex
 NOMAKEDIR    = $(DOXYGENDIR) .git%
-SRCDIR       = ./src
-ifeq "$(strip $(SRCDIR))" ""
-	SRCDIR   = .
-endif
 OBJDIR       = ./obj
 ifeq "$(strip $(OBJDIR))" ""
 	OBJDIR   = .
