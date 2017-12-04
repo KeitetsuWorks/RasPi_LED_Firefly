@@ -24,7 +24,7 @@ DOXYGENDIR   = ./html ./latex
 NOMAKEDIR    = $(DOXYGENDIR) .git%
 OBJDIR       = ./obj
 ifeq "$(strip $(OBJDIR))" ""
-	OBJDIR   = .
+	OBJDIR = .
 endif
 BINDIR       = ./bin
 ifeq "$(strip $(BINDIR))" ""
