@@ -15,12 +15,12 @@
 
 #include "ProgramInfo.h"
 
-#define LED                 18              /*!< LEDのGPIOポート番号 */
+#define LED                 18              /**< LEDのGPIOポート番号 */
 
-#define LED_PWM_DIV         3               /*!< LEDのPWMタイマ分周比（PWM周波数: 約25kHz） */
-#define LED_PWM_RANGE       256             /*!< LEDのPWM分解能 */
-#define LED_PWM_INTERVAL    4000            /*!< LEDの明暗変化間隔（デューティ変更間隔）（マイクロ秒） */
-#define LED_PWM_LOOP        10              /*!< LEDの明暗繰返し回数 */
+#define LED_PWM_DIV         3               /**< LEDのPWMタイマ分周比（PWM周波数: 約25kHz） */
+#define LED_PWM_RANGE       256             /**< LEDのPWM分解能 */
+#define LED_PWM_INTERVAL    4000            /**< LEDの明暗変化間隔（デューティ変更間隔）（マイクロ秒） */
+#define LED_PWM_LOOP        10              /**< LEDの明暗繰返し回数 */
 
 
 /**
